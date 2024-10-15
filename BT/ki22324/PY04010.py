@@ -1,0 +1,8 @@
+name = input()
+date = input()
+a = float(input())
+b = float(input())
+c = float(input())
+print(name,end=" ")
+print(date,end=" ")
+print(a+b+c)
