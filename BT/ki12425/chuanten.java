@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class chuanten {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         sc.nextLine();
