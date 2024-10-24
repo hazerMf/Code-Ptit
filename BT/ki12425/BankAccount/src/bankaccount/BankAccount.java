@@ -2,22 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package studentmgmt;
+package bankaccount;
+
+import java.util.Scanner;
 
 /**
  *
  * @author User
  */
-public class StudentMGMT {
+public class BankAccount {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Student_ s =new Student_();
-        s.input();
-        s.output();
+        Scanner sc = new Scanner(System.in);
     }
     
 }

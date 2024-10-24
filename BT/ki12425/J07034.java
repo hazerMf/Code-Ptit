@@ -18,6 +18,7 @@ public class J07034 {
         for (MonHoc i : l) {
             System.out.println(i);
         }
+        sc.close();
     }
 }
 
