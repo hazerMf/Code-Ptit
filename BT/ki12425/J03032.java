@@ -8,10 +8,12 @@ public class J03032 {
         while (T-- > 0) {
             String[] ar = sc.nextLine().trim().split("\\s+");
             for (String i : ar) {
-                i = new StringBuilder(i).reverse().toString();
-            }
-            for (String i : ar) {
-                System.out.print(i + " ");
+                String nstr="";
+                for (int j=0; j<i.length(); j++){
+                    Character ch= i.charAt(j); 
+                    nstr= ch+nstr;
+                }
+                System.out.print(nstr + " ");
             }
             System.out.println();
         }

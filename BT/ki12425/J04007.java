@@ -23,7 +23,7 @@ class NhanVien{
         this.gioiTinh = g;
         this.ngaySinh = n;
         this.diaChi = d;
-        this.thue = th;HELLOFILE
+        this.thue = th;
         this.ngayKi = k;
     }
 
