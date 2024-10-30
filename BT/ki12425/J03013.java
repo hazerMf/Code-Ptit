@@ -7,10 +7,16 @@ public class J03013 {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while(t-->0){
-            BigInteger A = sc.nextBigInteger();
-            BigInteger B = sc.nextBigInteger();
-            BigInteger C = A.subtract(B).abs();
-            System.out.println(C.toString());
+            BigInteger a = sc.nextBigInteger();
+            BigInteger b = sc.nextBigInteger();
+            BigInteger c = a.subtract(b).abs();
+
+            StringBuilder sb = new StringBuilder(c.toString());
+            int maxLen = Math.max(a.toString().length(), b.toString().length());
+            while (sb.length() < maxLen) {
+                sb.insert(0, '0');
+            }
+            System.out.println(sb.toString());
         }
     }
 }
