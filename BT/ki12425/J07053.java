@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class J07053 {
     public static int chuanHoa(String s){
         String[] temp = s.trim().split("/");
-        return 2021 - Integer.parseInt(temp[2]);
+        return 2024 - Integer.parseInt(temp[2]);
     }
 
     public static String ch(String name){
