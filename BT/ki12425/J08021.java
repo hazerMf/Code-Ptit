@@ -2,31 +2,24 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class J08021 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+        int t = Integer.parseInt(sc.nextLine());
         while (t-- > 0) {
-            String s = sc.next();
-            Stack<Character> st = new Stack<>();
-            st.push(')');
-            int max_len = 0;
-            int temp_len = 0;
-            for (int i = 0; i < s.length(); i++) {
-                char k = s.charAt(i);
-                if(k=='('){
-                    st.push(k);
-                }else{
-                    if(st.peek()!='('){
-                        temp_len=0;
-                        st.push(k);
-                    }else{
-                        st.pop();
-                        temp_len+=2;
-                        if(temp_len>max_len) max_len=temp_len; 
-                    }
+            char[] s = ("0" + sc.nextLine()).split("\\.")[0].toCharArray();
+            Stack<Integer> st = new Stack<>();
+            int res = 0;
+            st.push(0);
+            for (int i = 1; i < s.length; i++) {
+                if (!st.empty() && s[st.peek()] == '(' && s[i] == ')') {
+                    st.pop();
+                    res = Math.max(res, i - st.peek());
                 }
+                else st.push(i);
             }
-            System.out.println(max_len);
+            System.out.println(res);
         }
+        sc.close();
     }
 }
