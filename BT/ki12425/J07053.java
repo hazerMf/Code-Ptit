@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class J07053 {
     public static int chuanHoa(String s){
         String[] temp = s.trim().split("/");
-        return 2024 - Integer.parseInt(temp[2]);
+        return 2021 - Integer.parseInt(temp[2]);
     }
 
     public static String ch(String name){
@@ -56,24 +56,26 @@ class Student{
     private float thucHanh;
     private String status;
 
-    public Student(String name, int tuoi, float math, float physic) {
+    public Student(String name, int tuoi, float lt, float th) {
         this.id = "PH"+String.format("%02d",cnt++);
         this.name = name;
         this.tuoi = tuoi;
-        this.lyThuyet = math;
-        this.thucHanh = physic;
+        this.lyThuyet = lt;
+        this.thucHanh = th;
     }
 
     public int getSumMark() {
         float sum = (lyThuyet+thucHanh)/2;
-        if(lyThuyet>7.5&&thucHanh>7.5){
+        if(lyThuyet>=7.5&&thucHanh>=7.5){
             sum+=0.5;
         }
-        if(lyThuyet>8&&thucHanh>8){
+        if(lyThuyet>=8&&thucHanh>=8){
             sum+=0.5;
         }
         if(sum>10) sum = 10;
-        return (int)sum;
+        if((sum*10)%10>=5){
+            return (int) Math.ceil(sum);
+        }else return (int) Math.floor(sum);
     }
 
     public String getStatus() {
