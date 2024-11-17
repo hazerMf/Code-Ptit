@@ -34,7 +34,7 @@ public class J05003{
             String classs = sc.nextLine();
             String dateOfBirth = sdf.format(sdf.parse(sc.nextLine()));
             float gpa = Float.parseFloat(sc.nextLine());
-            Student_ student = new Student_(name, classs, dateOfBirth, gpa);
+            Student student = new Student(name, classs, dateOfBirth, gpa);
             System.out.println(student);
         }
     }
